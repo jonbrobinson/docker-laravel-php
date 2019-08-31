@@ -22,6 +22,7 @@ RUN apk add --no-cache --virtual .build-deps \
         libintl \
         icu \
         icu-dev \
+        zlib-dev \
     &&  pecl install imagick \
     &&  docker-php-ext-enable imagick \
     &&  docker-php-ext-install \
@@ -37,6 +38,7 @@ RUN apk add --no-cache --virtual .build-deps \
         xml \
         intl \
         gd \
+        zip \
     &&  apk del -f .build-deps
 
 WORKDIR /var/www
