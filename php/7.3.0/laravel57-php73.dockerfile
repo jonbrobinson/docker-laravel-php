@@ -35,6 +35,7 @@ RUN apk add --no-cache --virtual .build-deps \
         tokenizer \
         xml \
         intl \
+        gd \
     &&  apk del -f .build-deps
 
 WORKDIR /var/www
